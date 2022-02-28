@@ -6,28 +6,7 @@ import './About.scss';
 
 import { urlFor, client } from '../../client';
 
-const abouts = [
-	{
-		title: 'Web developement',
-		description: 'I am a good web developer',
-		imageURL: images.about01,
-	},
-	{
-		title: 'Frontend Developement',
-		description: 'I am a good web developer',
-		imageURL: images.about02,
-	},
-	{
-		title: 'Backend developement',
-		description: 'I am a good web developer',
-		imageURL: images.about03,
-	},
-	{
-		title: 'MERN stack',
-		description: 'I am a good web developer',
-		imageURL: images.about04,
-	},
-];
+
 const About = () => {
   const [abouts,setAbouts] = useState([]);
 
@@ -56,7 +35,7 @@ const About = () => {
 							className="app__profile-item"
 							key={about.title + index}
 						>
-							<img src={about.imageURL} alt={about.title} />
+							<img src={urlFor(about.imgUrl)} alt={about.title} />
 							<h2 className='bold-text' style={{marginTop:20}}>{about.title}</h2>
               <p className="p-text" style={{marginTop:10}}>{about.description} </p>
 						</motion.div>
